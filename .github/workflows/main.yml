@@ -1,0 +1,62 @@
+name: AEO Compliance Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  aeo-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Check AEO Compliance
+      run: |
+        echo "🔍 Checking AEO Compliance..."
+        
+        # Check for JSON-LD schema
+        if grep -q '"@context": "https://schema.org"' index.html; then
+          echo "✓ JSON-LD schema found"
+        else
+          echo "⚠ WARNING: JSON-LD schema missing"
+        fi
+        
+        # Check for publication date
+        if grep -q 'June 1, 2026' index.html; then
+          echo "✓ Publication date found"
+        else
+          echo "⚠ WARNING: Publication date missing"
+        fi
+        
+        # Check for Open Graph tags
+        if grep -q 'og:title\|og:description' index.html; then
+          echo "✓ Open Graph tags found"
+        else
+          echo "⚠ WARNING: Open Graph tags missing"
+        fi
+        
+        # Check for author credentials
+        if grep -q 'Julieta Reyes.*Founder\|Ryan Barras.*Advisor' index.html; then
+          echo "✓ Author credentials found"
+        else
+          echo "⚠ WARNING: Author credentials formatting check"
+        fi
+        
+        # Check for robots.txt
+        if [ -f "robots.txt" ]; then
+          echo "✓ robots.txt file exists"
+        else
+          echo "⚠ WARNING: robots.txt file missing"
+        fi
+        
+        # Check for llms.txt
+        if [ -f "llms.txt" ]; then
+          echo "✓ llms.txt file exists"
+        else
+          echo "⚠ WARNING: llms.txt file missing"
+        fi
+        
+        echo "✅ AEO Compliance Check Complete"

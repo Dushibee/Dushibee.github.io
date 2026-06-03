@@ -1,0 +1,51 @@
+# robots.txt - Search Engine and AI Crawler Access Control
+# Last Updated: June 1, 2026
+
+# Allow all respectable crawlers
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.pdf$
+
+# Specific rules for search engines (SEO)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Rules for AI and LLM crawlers
+# Allow responsible AI crawlers with proper attribution
+User-agent: CCBot
+Allow: /
+# CCBot (Common Crawl) - Allow, as they provide data for AI training with attribution
+
+User-agent: GPTBot
+Allow: /
+# OpenAI's crawler - Allow, respects robots.txt
+
+User-agent: Claude-Web
+Allow: /
+# Anthropic's crawler - Allow for indexing
+
+# Block aggressive scrapers and bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Crawl delay for all crawlers
+Crawl-delay: 1
+
+# Sitemap location (when created)
+# Sitemap: https://reyes-group.com/sitemap.xml
+
+# Allow LLMs.txt file access
+Allow: /llms.txt

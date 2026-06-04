@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | The Reyes Group</title>
+  <meta name="description" content="Meet the advisors at The Reyes Group. Julieta Reyes and Ryan Barras bring decades of institutional leadership experience across diplomacy, defense, and corporate sectors.">
+  <meta property="og:title" content="About Us — The Reyes Group">
+  <meta property="og:description" content="Strategic advisors with 19+ years in diplomatic operations, military leadership, cybersecurity, and organizational development.">
+  <meta property="og:url" content="https://reyes-group.com/about.html">
+  <meta property="og:image" content="https://reyes-group.com/logo.png">
+  <link rel="icon" type="image/x-icon" href="https://reyes-group.com/favicon.ico">
+  <link rel="apple-touch-icon" href="https://reyes-group.com/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Didact+Gothic&family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://reyes-group.com/about.html",
+  "name": "The Reyes Group Advisors",
+  "mainEntity": [
+    {
+      "@type": "Person",
+      "@id": "https://www.linkedin.com/in/julietareyes/",
+      "name": "Julieta Reyes",
+      "jobTitle": "Founder, Strategic Advisor",
+      "email": "julietareyesflores@gmail.com",
+      "url": "https://www.linkedin.com/in/julietareyes/"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.linkedin.com/in/ryan-barras-544a901/",
+      "name": "Ryan Barras",
+      "jobTitle": "Advisor, Cyber Security & AI Leadership",
+      "email": "ryanbarras@gmail.com",
+      "url": "https://www.linkedin.com/in/ryan-barras-544a901/"
+    }
+  ]
+}
+</script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold:       #c9a96e;
+      --gold-dim:   #8a6f42;
+      --dark:       #0c0c18;
+      --dark-2:     #111120;
+      --dark-3:     #16162a;
+      --cream:      #f2ede4;
+      --cream-dim:  #d8d0c0;
+      --muted:      #9a9488;
+      --serif-disp: 'Playfair Display', Georgia, serif;
+      --serif:      'Cormorant', Georgia, serif;
+      --sans:       'Didact Gothic', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--dark); color: var(--cream); font-family: var(--serif); overflow-x: hidden; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 28px 64px; transition: padding 0.5s, background 0.5s;
+    }
+    nav.scrolled {
+      padding: 18px 64px;
+      background: rgba(12,12,24,0.96);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(201,169,110,0.12);
+    }
+    .nav-logo { font-family: var(--sans); font-size: 11px; letter-spacing: 6px; color: var(--gold); text-decoration: none; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 40px; list-style: none; margin-left: auto; }
+    .nav-links a { font-family: var(--sans); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    .breadcrumbs { padding: 100px 64px 20px; }
+    .breadcrumbs a, .breadcrumbs span { font-family: var(--sans); font-size: 10px; letter-spacing: 2px; color: #8a6f42; text-decoration: none; }
+    .breadcrumbs a:hover { color: var(--gold); }
+    .breadcrumbs span { color: var(--muted); margin: 0 8px; }
+
+    section { padding: 80px 64px; }
+    .inner { max-width: 920px; margin: 0 auto; }
+    h1 { font-family: var(--serif-disp); font-size: clamp(40px, 6vw, 72px); font-weight: 400; line-height: 1.1; color: var(--cream); margin-bottom: 28px; }
+    h1 em { font-style: italic; color: var(--gold); }
+
+    .advisors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 48px;
+      margin-top: 60px;
+    }
+
+    .advisor-card {
+      text-align: center;
+    }
+
+    .advisor-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--dark-2);
+      border: 1px solid rgba(201,169,110,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+
+    .advisor-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: grayscale(100%);
+    }
+
+    .advisor-label {
+      font-family: var(--sans);
+      font-size: 8px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .advisor-name {
+      font-family: var(--serif-disp);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 4px;
+    }
+
+    .advisor-title {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .advisor-bio {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--cream-dim);
+      margin-bottom: 12px;
+    }
+
+    .bio-short { display: block; }
+    .bio-full { display: none; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(201,169,110,0.15); }
+    .bio-full.active { display: block; }
+
+    .read-more-btn {
+      background: none;
+      border: none;
+      font-family: var(--sans);
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      cursor: pointer;
+      padding: 4px 0;
+      margin-bottom: 16px;
+      transition: color 0.3s;
+    }
+
+    .read-more-btn:hover { color: var(--gold-light); }
+
+    .advisor-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .advisor-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--sans);
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201,169,110,0.35);
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+
+    .advisor-btn:hover {
+      background: var(--gold);
+      color: var(--dark);
+      border-color: var(--gold);
+    }
+
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(201,169,110,0.08);
+      padding: 36px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .f-brand { font-family: var(--sans); font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: #8a6f42; }
+    .f-faith { font-family: var(--serif); font-size: 14px; font-style: italic; color: #3a3a5a; }
+    .f-copy { font-family: var(--sans); font-size: 9px; letter-spacing: 2px; color: #3a3a4a; }
+
+    @media (max-width: 900px) {
+      nav { padding: 20px 28px; }
+      nav.scrolled { padding: 14px 28px; }
+      .breadcrumbs { padding: 80px 28px 16px; }
+      section { padding: 60px 28px; }
+      .advisors-grid { gap: 40px; }
+      footer { flex-direction: column; gap: 16px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="https://reyes-group.com">The Reyes Group</a>
+  <ul class="nav-links">
+    <li><a href="https://reyes-group.com#who">Who We Are</a></li>
+    <li><a href="https://reyes-group.com/services.html">Services</a></li>
+    <li><a href="https://reyes-group.com/contact.html">Contact</a></li>
+    <li><a href="https://reyes-group.com/about.html">About Us</a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumbs">
+  <a href="https://reyes-group.com">Home</a> <span>/</span> <span>About Us</span>
+</div>
+
+<section style="padding-top: 140px; text-align: center;">
+  <div class="inner" style="max-width: 720px;">
+    <h1>Meet the <em>Advisors</em></h1>
+  </div>
+</section>
+
+<section id="advisors" style="background: var(--dark-2);">
+  <div class="inner">
+    <div class="advisors-grid">
+      
+      <!-- JULIETA REYES -->
+      <div class="advisor-card">
+        <div class="advisor-photo">
+          <img src="https://reyes-group.com/JR.png" alt="Julieta Reyes" onerror="this.style.display='none'">
+        </div>
+        <p class="advisor-label">Founder</p>
+        <p class="advisor-name">Julieta Reyes</p>
+        <p class="advisor-title">Strategic Advisor | Diversity & Inclusion Lead | Global Operations</p>
+        
+        <p class="advisor-bio bio-short">19 years at the highest levels of international institutional life in diplomatic operations, public and military diplomacy, nation branding, strategic communications, and organizational development. Fluent in four languages.</p>
+        
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
+        
+        <div class="bio-full">
+          <p class="advisor-bio">Her career took shape within the Kingdom of the Netherlands' diplomatic missions in the United States: first at the Consulate General in Miami, and later at the Embassy in Washington, D.C., the capital of the Free World. For years, she acted as a bridge between diverse organizations like the foreign missions of the Ministry of Foreign Affairs and the Ministry of Defense, giving her a great understanding of the complex relationships within the Kingdom of the Netherlands. She built expertise in strategic communication, inclusive protocol design, and logistics modernization, serving as a trusted Chief of Support to military leadership and heads of mission. She is specialized in strengthening the "human infrastructure" of organizations, facilitating knowledge sharing and workshops that turn challenges into collaborative opportunities.</p>
+        </div>
+        
+        <div class="advisor-buttons">
+          <a href="https://www.linkedin.com/in/julietareyes/" target="_blank" class="advisor-btn">LinkedIn</a>
+          <a href="mailto:julietareyesflores@gmail.com" class="advisor-btn">Email</a>
+        </div>
+      </div>
+
+      <!-- RYAN BARRAS -->
+      <div class="advisor-card">
+        <div class="advisor-photo">
+          <img src="https://reyes-group.com/RBarras.png" alt="Ryan Barras" onerror="this.style.display='none'">
+        </div>
+        <p class="advisor-label">Advisor</p>
+        <p class="advisor-name">Ryan Barras</p>
+        <p class="advisor-title">Director of IT Security / CISO | GRC & Strategic Operations</p>
+        
+        <p class="advisor-bio bio-short">Healthcare, government, and corporate sectors. Builds security programs that protect data integrity and business continuity without compromising innovation.</p>
+        
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
+        
+        <div class="bio-full">
+          <p class="advisor-bio"><strong>Expertise & Specializations:</strong> Third-party risk management (TPRM) program maturation, Security Operations Center (SecOps) automation via ServiceNow, executive-level CISA-aligned tabletop exercises and crisis simulations, and enterprise security governance for Fortune 500 and public institutions.</p>
+          <p class="advisor-bio"><strong>Leadership Experience:</strong> Mt. Sinai Health System (CISO-level roles), US Department of Labor (consulting), Princeton University, Blue Cross Blue Shield. Ryan's defining principle: "human infrastructure" recognizing that the strongest security frameworks depend on people who understand both technical risk and organizational culture. He translates complex cyber threats into actionable business intelligence for leadership teams, bridging the gap between security specialists and executive decision-makers.</p>
+        </div>
+        
+        <div class="advisor-buttons">
+          <a href="https://www.linkedin.com/in/ryan-barras-544a901/" target="_blank" class="advisor-btn">LinkedIn</a>
+          <a href="mailto:ryanbarras@gmail.com" class="advisor-btn">Email</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="f-brand">The Reyes Group</span>
+  <span class="f-faith">Rooted in purpose. Guided by integrity.</span>
+  <span class="f-copy">Last Updated: June 4, 2026 | © 2026</span>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+  
+  function toggleBio(btn) {
+    const bioFull = btn.nextElementSibling;
+    bioFull.classList.toggle('active');
+    btn.textContent = bioFull.classList.contains('active') ? 'Show Less' : 'Read More';
+  }
+</script>
+
+</body>
+</html>

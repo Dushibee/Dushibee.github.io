@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a38;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0c0c18;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="#0c0c18"/>
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Grid pattern (same as home page) -->
+  <g opacity="0.025">
+    <defs>
+      <pattern id="gridPattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+        <line x1="0" y1="0" x2="80" y2="0" stroke="#c9a96e" stroke-width="1"/>
+        <line x1="0" y1="0" x2="0" y2="80" stroke="#c9a96e" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="1200" height="630" fill="url(#gridPattern)"/>
+  </g>
+  
+  <!-- Top gold border -->
+  <rect width="1200" height="4" fill="#c9a96e"/>
+  
+  <!-- Left gold accent -->
+  <rect x="0" y="0" width="8" height="630" fill="#c9a96e" opacity="0.6"/>
+  
+  <!-- Main headline -->
+  <text x="600" y="140" font-family="Georgia, serif" font-size="72" font-weight="bold" text-anchor="middle" fill="#f2ede4">
+    117 Years
+  </text>
+  
+  <!-- Subheadline -->
+  <text x="600" y="240" font-family="Georgia, serif" font-size="68" text-anchor="middle" fill="#f2ede4">
+    to One
+  </text>
+  
+  <!-- Gold accent text -->
+  <text x="600" y="320" font-family="Georgia, serif" font-size="68" font-style="italic" text-anchor="middle" fill="#c9a96e">
+    Moment
+  </text>
+  
+  <!-- Descriptive text -->
+  <text x="600" y="400" font-family="Georgia, serif" font-size="28" text-anchor="middle" fill="#d8d0c0">
+    The Unlikely Leadership That Changed Everything
+  </text>
+  
+  <!-- Bottom description -->
+  <text x="600" y="480" font-family="Georgia, serif" font-size="20" text-anchor="middle" fill="#9a9488">
+    Curaçao's Path to FIFA World Cup 2026
+  </text>
+  
+  <!-- Bottom gold border -->
+  <rect y="626" width="1200" height="4" fill="#c9a96e"/>
+  
+  <!-- Branding -->
+  <text x="1150" y="605" font-family="Didact Gothic, sans-serif" font-size="14" text-anchor="end" fill="#8a6f42" letter-spacing="3">
+    THE REYES GROUP
+  </text>
+</svg>
